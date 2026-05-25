@@ -2,6 +2,24 @@
 
 > Bootstrap a load-bearing tool autobuilder needs: every iteration's unfakeable scalar must be emitted by a binary that was itself built under autobuilder's verified loop.
 
+## Install
+
+### One-liner
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/j0yen/autobuilder-metric-harness/main/install.sh | bash
+```
+
+### Manual
+
+```sh
+git clone --depth 1 https://github.com/j0yen/autobuilder-metric-harness.git
+cd autobuilder-metric-harness
+./install.sh
+```
+
+Installs the `autobuilder-metric-harness` binary via `cargo install --path . --locked`. Requires `cargo` / `rustc 1.85+` and `git`. Built binary lands in `~/.cargo/bin/`.
+
 ## Why
 
 Bootstrap a load-bearing tool autobuilder needs: every iteration's unfakeable scalar must be emitted by a binary that was itself built under autobuilder's verified loop. The current shell-script fallback is a crack in the trust model — until the metric harness is owned by autobuilder, the loop's advance/revert decisions are only as trustworthy as a bash file with no tests.
